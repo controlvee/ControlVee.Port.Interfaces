@@ -14,7 +14,7 @@ namespace ControlVee.Port.Interfaces
             f2 = new FileStream();
             m = new MemoryStream() { StreamSize = 10 };
 
-            Console.WriteLine($"Executing: {f.Read()} + {f2.Read()} + {m.StreamSize}");
+            Console.WriteLine($"Executing: {f.Read()} {f2.Read()} Size: {m.StreamSize}");
 
             IStream i;
             FileStreamA fs;
@@ -42,14 +42,6 @@ namespace ControlVee.Port.Interfaces
 
     class FileStream : Stream
     {
-        private int privateSize;
-        private string fileName;
-        
-        public string Read()
-        {
-            return "Data read from file.";
-        }
-
         public string Copy(string newFile)
         {
             return $"Copying {newFile}.";
@@ -69,10 +61,8 @@ namespace ControlVee.Port.Interfaces
     class FileStreamA : IStream
     {
         private int privateSize;
-        private string fileName;
 
         int IStream.StreamSize { get { return privateSize; } set { privateSize = value; } }
-
 
         public string Read()
         {
