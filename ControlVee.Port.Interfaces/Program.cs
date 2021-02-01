@@ -11,10 +11,9 @@ namespace ControlVee.Port.Interfaces
             Stream m;
 
             f = new FileStream();
-            f2 = new FileStream();
             m = new MemoryStream() { StreamSize = 10 };
 
-            Console.WriteLine($"Executing: {f.Read()} {f2.Read()} Size: {m.StreamSize}");
+            Console.WriteLine($"Executing: {f.Read()} Size: {m.StreamSize}");
 
             IStream i;
             FileStreamA fs;
