@@ -22,7 +22,7 @@ namespace ControlVee.Port.Interfaces
 
             //
             // FileStream class's implementation of
-            // ToString() passed through IStream interface.
+            // ToString().
             //
 
             Console.WriteLine($"Action: {i} Size: {i.StreamSize}");
@@ -53,7 +53,7 @@ namespace ControlVee.Port.Interfaces
 
         public override string ToString()
         {
-            return $"{Copy($"c:\\uers\\a\b\\test.txt")}";
+            return $"{Copy($"c:\\users\\a\\b\\test.txt")}";
         }
     }
 
@@ -80,7 +80,7 @@ namespace ControlVee.Port.Interfaces
 
         public override string ToString()
         {
-            return $"{Copy($"c:\\uers\\a\b\\test.txt")}";
+            return $"{Copy($"c:\\users\\a\\b\\test.txt")}";
         }
     }
 
@@ -108,7 +108,7 @@ namespace ControlVee.Port.Interfaces
 
         public override string ToString()
         {
-            return $"Reading data from memory stream.";
+            return "Reading data from memory stream.";
         }
     }
 }
